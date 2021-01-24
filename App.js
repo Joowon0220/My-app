@@ -1,6 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, TextInput, Alert } from 'react-native';
+//Text: 글 적을수 있는거, like <p> tag
+//View: html의 div
+//TouchableOpacity: 버튼 눌렀을때 흰색으로 효과주는거
+//TextInput: 자바의 input
+//Alert: 버튼 눌렀을때 얼럿팝업 띄워서 알려줌
 
 export default function App() {
   let content=''
