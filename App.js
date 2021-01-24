@@ -44,7 +44,8 @@ const styles = StyleSheet.create({
   },
   first: {
     fontSize: 20,
-    color:red,
+    color:'red',
+    padding:16
   },
   input:{
     width:'100%',
