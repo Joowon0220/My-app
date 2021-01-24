@@ -44,6 +44,7 @@ const styles = StyleSheet.create({
   },
   first: {
     fontSize: 20,
+    color:red,
   },
   input:{
     width:'100%',
