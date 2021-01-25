@@ -7,6 +7,8 @@ import { StyleSheet, Text, View, TouchableOpacity, TextInput, Alert } from 'reac
 //TextInput: 자바의 input
 //Alert: 버튼 눌렀을때 얼럿팝업 띄워서 알려줌!!
 
+import StartButton from './components/StartButton'
+
 export default function App() {
   let content=''
   return (
@@ -20,17 +22,11 @@ export default function App() {
         style={styles.input}
       
       />
-      <TouchableOpacity //버튼 눌렀을때 흰색으로 눌린 효과 남
-        activeOpacity={0.5} //버튼 눌렀을 때 opacity
-        onPress={() => { //경보창이 항상 떠 있는게 아니라 버튼을 누른 후에 뜨도록 '나중에'하라는 뜻
-          Alert.alert(content) //담긴 text를 content로 불러옴
-        }}
-      >
-      <View style={styles.box}>
-      <Text style={styles.first}>몽콩별에 오신 여러분 환영합니다🙋‍♀️ </Text>
-      <StatusBar style="auto" />
-      </View>
-      </TouchableOpacity>
+    
+    <StartButton showAlert={()=>{
+      Alert.alert(content)
+    }}/>
+ 
     </View>
   );
 }
