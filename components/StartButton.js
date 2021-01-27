@@ -8,13 +8,14 @@ import {
 
 const StartButton =({
     showAlert,
+    disabled,
 }) => {
     return(
         <TouchableOpacity 
             activeOpacity={0.5}
-            onPress={showAlert}
+            onPress={disabled ? null : showAlert}
         >
-            <View style={styles.box}>
+            <View style={disabled ? styles.disabled : styles.box}>
                 <Text style={styles.text}>
                     시작하기
                 </Text>
@@ -27,7 +28,11 @@ const StartButton =({
 const styles =StyleSheet.create({
     box: {
         backgroundColor: 'rgba(213, 184, 255, 1)',
-        padding: 36,
+        padding: 16,
+    },
+    disabled: {
+        backgroundColor: 'rgba(0, 0, 0, 0.7)',
+        padding: 16,
     },
     text:{
         color:'white',
