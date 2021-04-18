@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>
-                할 일 목록
+                할 일 목록123
             </Text>
         </View>
     )
