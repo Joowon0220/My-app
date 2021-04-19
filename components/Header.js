@@ -9,6 +9,7 @@ const Header = () => {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>
+
                 할 일 목록 💪
             </Text>
         </View>
