@@ -3,9 +3,11 @@ import{
     View,
     Text,
     TouchableOpacity,
-    StyleSheet,   
+    StyleSheet,
+    Platform,
 } from 'react-native'
 import{Ionicons} from '@expo/vector-icons'
+// import { Platform } from 'node:os'
 const Header = () => {
     return (
         <View style={styles.container}>
@@ -21,9 +23,13 @@ const Header = () => {
 
 const styles = StyleSheet.create({
     container: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent:'space-between',
         marginTop: 56,
         marginBottom: 16,
         marginLeft: 16,
+        marginRight: 16,
     },
     title:{
         color: '#212121',
@@ -33,10 +39,12 @@ const styles = StyleSheet.create({
     button: {
         width: 28,
         height: 28,
-        borderRadius: 25,
+        borderRadius: 14,
         backgroundColor: '#212121',
         justifyContent: 'center',
-        alignItems:'center',
+        alignItems: 'center',
+        paddingTop: Platform.select({ ios: 2, android: 2}),
+        paddingLeft:Platform.select({ios:1, android:3}),
 
     },
 })
