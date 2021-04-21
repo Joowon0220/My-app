@@ -2,16 +2,19 @@ import React from 'react'
 import{
     View,
     Text,
+    TouchableOpacity,
     StyleSheet,   
 } from 'react-native'
-
+import{Ionicons} from '@expo/vector-icons'
 const Header = () => {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>
                 할 일 목록💪
-                추가 변화
             </Text>
+            <TouchableOpacity activeOpacity={0.8}>
+                <Ionicons name="ios-add" color="#fff" size={24} style={styles.button}></Ionicons>
+            </TouchableOpacity>
         </View>
     )
 }
@@ -27,7 +30,15 @@ const styles = StyleSheet.create({
         fontSize: 32,
         fontWeight: '600'
     },
+    button: {
+        width: 28,
+        height: 28,
+        borderRadius: 25,
+        backgroundColor: '#212121',
+        justifyContent: 'center',
+        alignItems:'center',
+
+    },
 })
 
 export default Header
-//test
