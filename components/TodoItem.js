@@ -5,13 +5,21 @@ import{
     TouchableOpacity,
     StyleSheet,   
 } from 'react-native'
-import {FontAwesome} from '@expo/vector-icons'
+import Swipeable from 'react-native-gesture-handler/Swipeable'
+import { FontAwesome } from '@expo/vector-icons'
+import DeleteButton from './DeleteButton'
 
 const TodoItem = ({
     title,
     done
 }) => {
     return (
+        <Swipeable renderLeftActions={() => <DeleteButton />}
+            swipeThreshold={10} //10정도만 밀면 나머지는 자동으로 밀림
+            maxSwipeDistance={6} //부품이 밀리면 나오는 거리
+            slideroutView={<DeleteButton />}
+            preventSwipeRight={true} //오른으로 밀리는거는 막기
+        >
         <View style={styles.container}>
         <View style={styles.todoBox}>
             <TouchableOpacity  
@@ -26,6 +34,7 @@ const TodoItem = ({
             </Text>
         </View>
         </View>
+        </Swipeable>
     )
 }
 

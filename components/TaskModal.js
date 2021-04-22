@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 8,
     borderTopRightRadius:8,
 
-  }
+  },
 })
 
 export default TaskModal;
