@@ -14,18 +14,14 @@ const TodoItem = ({
     done
 }) => {
     return (
-        <Swipeable renderLeftActions={() => <DeleteButton />}
-            swipeThreshold={10} //10정도만 밀면 나머지는 자동으로 밀림
-            maxSwipeDistance={6} //부품이 밀리면 나오는 거리
-            slideroutView={<DeleteButton />}
-            preventSwipeRight={true} //오른으로 밀리는거는 막기
+        <Swipeable renderRightActions={() => <DeleteButton />}
+           
         >
         <View style={styles.container}>
         <View style={styles.todoBox}>
             <TouchableOpacity  
                 activeOpacity={0.5} 
                 style={done ? styles.done : styles.check}
-            
             >
               <FontAwesome name="check" color={done ? "#fff" : "#a29bfe"} size={14}/>
             </TouchableOpacity>
