@@ -20,8 +20,6 @@ const TaskModal = ({
       <TextInput placeholder="새로운 신나는일 추가 🐾"/>
     </View>
   </Modal>
-  
-
   )
 }
 
@@ -35,7 +33,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFF',
     borderTopLeftRadius: 8,
     borderTopRightRadius:8,
-
   },
 })
 

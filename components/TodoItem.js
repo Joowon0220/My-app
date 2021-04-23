@@ -14,8 +14,7 @@ const TodoItem = ({
     done
 }) => {
     return (
-        <Swipeable renderRightActions={() => <DeleteButton />}
-           
+        <Swipeable renderRightActions={() => <DeleteButton />}       
         >
         <View style={styles.container}>
         <View style={styles.todoBox}>
@@ -23,7 +22,7 @@ const TodoItem = ({
                 activeOpacity={0.5} 
                 style={done ? styles.done : styles.check}
             >
-              <FontAwesome name="check" color={done ? "#fff" : "#a29bfe"} size={14}/>
+            <FontAwesome name="check" color={done ? "#fff" : "#a29bfe"} size={14}/>
             </TouchableOpacity>
             <Text style={styles.title}>
                 {title}
