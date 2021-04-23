@@ -14,13 +14,16 @@ export default class App extends React.Component {
     }, {
       title: '유튜브편집',
       done: false,
-    }],
+      }],
+    showModal: false,
   }
 
   render(){
   return (  
     <SafeAreaView style={styles.container}>
-      <Header />
+      <Header
+        show={()=>{this.setState({showModal:true})}}
+      />
       <FlatList
         data={this.state.todos}
         renderItem={({ item }) => {
@@ -36,7 +39,12 @@ export default class App extends React.Component {
         }}
       />
      
-      <TaskModal isVisible={false}/>
+      <TaskModal
+        isVisible={this.state.showModal}
+        hide={() => {
+          this.setState({ showModal: false })
+        }}
+        />
     </SafeAreaView>
   );
   }

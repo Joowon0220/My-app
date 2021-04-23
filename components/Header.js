@@ -8,14 +8,20 @@ import{
 } from 'react-native'
 import{Ionicons} from '@expo/vector-icons'
 // import { Platform } from 'node:os'
-const Header = () => {
+const Header = ({
+    show,
+}) => {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>
                 할 일 목록💪
             </Text>
-            <TouchableOpacity activeOpacity={0.8}>
-                <Ionicons name="ios-add" color="#fff" size={24} style={styles.button}></Ionicons>
+            <TouchableOpacity
+                activeOpacity={0.8}
+                onPress={show}
+                style={styles.button}
+            >
+                <Ionicons name="ios-add" color="#fff" size={24}/>
             </TouchableOpacity>
         </View>
     )
