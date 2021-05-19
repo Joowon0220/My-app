@@ -8,8 +8,10 @@ import Modal from 'react-native-modal'
 
 const TaskModal = ({
   isVisible,
+  add,
   hide,
 }) => {
+  let content = ''
    return (
   <Modal
        isVisible={isVisible}
@@ -17,7 +19,11 @@ const TaskModal = ({
        avoidKeyboard //키보드 탭 올라오면 그만큼 밀림
   >
     <View style={styles.container}>
-      <TextInput placeholder="새로운 신나는일 추가 🐾"/>
+      <TextInput 
+      onChangeText={(text)=>{content=text}}
+      onEndEditing={()=> add(content)}
+      placeholder="새로운 신나는일 추가 🐾"
+      />
     </View>
   </Modal>
   )

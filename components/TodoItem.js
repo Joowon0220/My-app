@@ -11,15 +11,18 @@ import DeleteButton from './DeleteButton'
 
 const TodoItem = ({
     title,
-    done
+    done,
+    remove,
+    toggle,
 }) => {
     return (
-        <Swipeable renderRightActions={() => <DeleteButton />}       
+        <Swipeable renderRightActions={() => <DeleteButton onPress={remove}/>}       
         >
         <View style={styles.container}>
         <View style={styles.todoBox}>
             <TouchableOpacity  
                 activeOpacity={0.5} 
+                onPress={toggle}
                 style={done ? styles.done : styles.check}
             >
             <FontAwesome name="check" color={done ? "#fff" : "#a29bfe"} size={14}/>
