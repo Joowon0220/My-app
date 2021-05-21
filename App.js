@@ -19,7 +19,7 @@ export default class App extends React.Component {
     showModal: false,
   }
 
-  componentWillMount(){
+  componentDidMount(){
 
     AsyncStorage.getItem('@todo.state').then((state)=>{
       this.setState(JSON.parse(state))
